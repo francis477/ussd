@@ -95,8 +95,12 @@
              lipa_na_mpesa($ussd_string_explode,$phone,$db);  
              break; 
              default:
-             displayMenu(); 
-            break;
+          	//11g. Request for city again
+					$response = "END Apologies, something went wrong... \n";
+                    // Print the response onto the page so that our gateway can read it
+                    header('Content-type: text/plain');
+                     echo $response;	
+                  break;
              
 
              
