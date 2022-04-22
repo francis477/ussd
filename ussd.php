@@ -294,6 +294,11 @@
          }else if($classChoice=="4"){  
              $total_fee="Ksh. 25,000";
              echo "END Total fee for Form 4 is " .$total_fee;
+         }else{
+            $response = "Invalid input \n";
+            // Print the response onto the page so that our gateway can read it
+            header('Content-type: text/plain');
+             echo $response;
          } 
 
      }  
@@ -336,6 +341,11 @@ function lipa_na_mpesa($details,$phone,$db){
 
      }else if($class=="4"){
      $class="Form 4";
+    }else{
+        $response = "Invalid input \n";
+        // Print the response onto the page so that our gateway can read it
+        header('Content-type: text/plain');
+         echo $response;
     }
 
    ussd_proceed($ussd_text);
@@ -392,7 +402,7 @@ function lipa_na_mpesa($details,$phone,$db){
       }
    }else{
        	//11g. Request for city again
-					$response = "END Apologies, something went wrong... \n";
+					$response = "Invalid input \n";
                     // Print the response onto the page so that our gateway can read it
                     header('Content-type: text/plain');
                      echo $response;
