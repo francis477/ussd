@@ -295,9 +295,12 @@
              $total_fee="Ksh. 25,000";
              echo "END Total fee for Form 4 is " .$total_fee;
          } 
-         else if($classChoice == 0 || $classChoice > 4 || !intval($classChoice)){
-            $response = "Invalid input";
-            header('Content-type: text/plain');
+        //  else if($classChoice ==  0 || $classChoice > 4 || !intval($classChoice)){
+        //     $response = "Invalid input \n";
+        //      echo $response;
+        // }
+        else {
+            $response = "Invalid input \n";
              echo $response;
         }
 
@@ -341,6 +344,11 @@ function lipa_na_mpesa($details,$phone,$db){
 
      }else if($class=="4"){
      $class="Form 4";
+    }else{
+     
+            $response = "Invalid input \n";
+             echo $response;
+        
     }
 
    ussd_proceed($ussd_text);
