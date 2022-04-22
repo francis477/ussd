@@ -296,8 +296,7 @@
              echo "END Total fee for Form 4 is " .$total_fee;
          } 
          else{
-            $response = "Invalid input \n";
-            header('Content-type: text/plain');
+            $response = "Invalid input";
              echo $response;
         }
 
