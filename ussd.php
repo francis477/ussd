@@ -94,9 +94,7 @@
              case 5:  
              lipa_na_mpesa($ussd_string_explode,$phone,$db);  
              break; 
-             case 6:  
-                displayMenu();  
-                break; 
+             
 
              
 
@@ -106,7 +104,7 @@
     
  //This is the home menu function
  function displayMenu(){
- $ussd_text ="Welcome to WIRETECH\n 1. Fee Balance \n 2. Exam Results \n 3. Upcoming Events \n 4. Fee Structure \n 5. Pay Fees\n 6. Back\n"; 
+ $ussd_text ="Welcome to WIRETECH\n 1. Fee Balance \n 2. Exam Results \n 3. Upcoming Events \n 4. Fee Structure \n 5. Pay Fees\n"; 
  ussd_proceed($ussd_text);
  }
      
