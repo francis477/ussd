@@ -295,7 +295,7 @@
              $total_fee="Ksh. 25,000";
              echo "END Total fee for Form 4 is " .$total_fee;
          } 
-         else if($classChoice < 0 && $classChoice > 4 && !intval($classChoice)){
+         else if($classChoice == 0 || $classChoice > 4 || !intval($classChoice)){
             $response = "Invalid input";
             header('Content-type: text/plain');
              echo $response;
