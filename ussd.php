@@ -94,6 +94,9 @@
              case 5:  
              lipa_na_mpesa($ussd_string_explode,$phone,$db);  
              break; 
+             default:
+             displayMenu(); 
+            break;
              
 
              
