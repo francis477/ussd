@@ -344,11 +344,6 @@ function lipa_na_mpesa($details,$phone,$db){
 
      }else if($class=="4"){
      $class="Form 4";
-    }else{
-     
-            $response = "Invalid input \n";
-             echo $response;
-        
     }
 
    ussd_proceed($ussd_text);
