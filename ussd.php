@@ -390,6 +390,12 @@ function lipa_na_mpesa($details,$phone,$db){
        } else {
          $errors = $sth->errorInfo();
       }
+   }else{
+       	//11g. Request for city again
+					$response = "END Apologies, something went wrong... \n";
+                    // Print the response onto the page so that our gateway can read it
+                    header('Content-type: text/plain');
+                     echo $response;
    }
 
   }
